@@ -1,0 +1,27 @@
+﻿<Window x:Class="MovieOrganizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+		WindowStartupLocation='CenterScreen'>
+    <Grid>
+		<Button HorizontalAlignment='Left'
+				VerticalAlignment='Top'
+				Click='Button_Click'>Test</Button>
+		<Grid Margin='0,30,0,0'>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width='1*' />
+				<ColumnDefinition Width='2*'/>
+			</Grid.ColumnDefinitions>
+			<TreeView Name='treeView1' />
+			<ListBox Name='listBox1' Grid.Column='1'/>
+		</Grid>
+		<!--<ListBox Name='listBox1'
+				 Margin='0,30,0,0'>
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text='{Binding }'
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>-->
+	</Grid>
+</Window>
