@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using Microsoft.Win32;
 using System.IO;
 using System.Diagnostics;
-using MovieOrganizerSettings = SharedClasses.OnlineSettings.MovieOrganizerSettings;
+using MovieOrganizerSettings = SharedClasses.SettingsSimple.MovieOrganizerSettings;
 using SharedClasses;
 
 namespace MovieOrganizer
@@ -33,7 +33,7 @@ namespace MovieOrganizer
 			treeView1.Items.Clear();
 
 			var movieFileExtensions = MovieOrganizerSettings.Instance.MovieFileExtensions;
-			var dir = GlobalSettings.MovieOrganizerSettings.Instance.MoviesRootDirectory;//@"F:\Movies";
+			var dir = MovieOrganizerSettings.Instance.MoviesRootDirectory;//@"F:\Movies";
 			var allFiles = Directory.GetFiles(dir, "*", SearchOption.AllDirectories);
 			var allExtensions =
 				allFiles
